@@ -44,3 +44,8 @@ emp_id,f_name,l_name,job_id,salary,dept_id,dept_id,dept_name,location
 109,mukesh,singh,HP128,300001,44,34,development,india
 109,mukesh,singh,HP128,300001,44,24,production,india
 109,mukesh,singh,HP128,300001,44,22,admistration,uk
+110,mukesh,singh,HP128,300001,44,54,maintenance,usa
+110,mukesh,singh,HP128,300001,44,44,communication,usa
+110,mukesh,singh,HP128,300001,44,34,development,india
+110,mukesh,singh,HP128,300001,44,24,production,india
+110,mukesh,singh,HP128,300001,44,22,admistration,uk
