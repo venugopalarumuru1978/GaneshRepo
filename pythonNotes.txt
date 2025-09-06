@@ -169,3 +169,10 @@ print(value/expression, end="spacing")
 
 range() :-  this function is used to generate values in specific sequencianl order. 
 range([start val], end val, [iteration]) :- here start val by default 0, iteration by default increment by 1
+-------------------------added new content
+end :-  this word allows to stop line breaking in print() method and provides some spacing b/w values
+print(value/expression, end="spacing")
+
+range() :-  this function is used to generate values in specific sequencianl order. 
+range([start val], end val, [iteration]) :- here start val by default 0, iteration by default increment by 1
+----------------------------
