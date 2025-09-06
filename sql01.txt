@@ -1,0 +1,141 @@
+Today's Agenda
+--------------
+Data		:- Collection of Raw facts and Figures
+				
+Process		:- The work which we do by using data
+
+Information	:- The processed Data / The final result of the task
+
+			Data  =>  Process =>  Information
+
+Table :- The collection of fact and figures organised in a structral format. i.e. table format.
+			Collection of rows and columns of particular entity. 
+
+	Purpose :-  easy to access and easy to understand.
+
+			Ex:-  any org  data can be represented in the form tables only. 
+
+Database :- :- The collection of fact and figures organised in a structral format(tables) of an entity. 
+					or
+			Collection of Inter-related tables of an entity.
+
+	Purpose :-  To overcome the drawbacks of file process system(FMS).
+
+FMS drawbacks: -
+		1.  No Security.
+		2.  Limited Data Storage.
+		3.  No Query Language provided to access any info quickly.
+
+Database System :- 
+		1.  Full Security. 
+		2.  Unlimited Storage System.
+		3.  Query Language(SQL)  to access and maintain databases.
+
+Example of Database:- 
+			School Database
+
+	1. Students
+		Biodata		:-   Sno, StdName, FatherName, gender, Age, Address, Location, Pincode, Phone, Rollno
+		ClassInfo	:-   RollNo   Class 	Section
+		ExamsInfo	:-   RollNo	Exam 	ExamDate
+		MarksInfo	:-   RollNo	Exam	Sub1	Sub2	Total 	Percentage	Result
+		AttendanceInfo
+		Feesparticulars
+		Transporatation
+	2. Employees
+		PersonalInfo
+		JobDetails
+		SalaryDetails
+	3. Library
+		BooksInfo
+		MembersInfo
+		IssuedBooks
+		MaintainceInfo
+				These 14 tables are called as School Database.
+----------------------
+Database Management System(DBMS) :- This will provide collection of rules to create and manage database systems.
+	these rules are called as Codd rules, who has defined these rules M.F.Codd. 
+	based on dbms, some software tools are introduced into market
+		
+		DBASE
+		FoxProw
+Later on that DBMS has got  different versions
+		RDBMS -  Relational DBMS
+		ORDBMS -  Object Relational DBMS
+		MDBMS - Modern DBMS
+
+Software Tools
+		ORACLE		-  Oracle Corporation(SQL, SQL * Plus, Pl/SQL)
+		SQL Server	-  Microsoft (SQL, T-SQL)
+		MySQL		- 
+		Postgre SQL	-
+		DB2		-
+		Sybase		-
+----------------
+What is a MySQL?
+	It is one of the RDBMS related programmable package.
+
+			It has two sections
+				SQL	:-  Strctured Query Language
+				T-SQL	:-  Transact - SQL(programming)
+
+Package :-  It is a readymade tool to work with specific task. 
+		MS _ Office (Word, Excel, PowerPoint)
+
+Programming Language :-  these are used to develop softwares(applications).
+			
+Latest Version of MySQL is 9.4 version  and running version is 8.0. 
+--------------------------------
+What is an SQL?
+		It is an Universal Language for Databases. Initally it was developed by ANSI Company, but they could not develop enviornment for the SQL, they used work on Command Prompt.  
+
+It is a non-procedural language, due to this it provides collection of commands which are classified into different types. 
+
+1.  Data Defintion Language(DDL) Commands :-  CREATE, ALTER, DROP
+2.  Data Manipulation Language (DML) Commands :-  INSERT, UPDATE, DELETE
+3.  Data Retrival Language(DRL) Commands :-  SELECT
+4.  Transaction Control Language(TCL) Commands :-  COMMIT, ROLLBACK
+5.  Data Control Language(DCL) Commands :-  GRANT, REVOKE
+
+Database :-  It is a collection of different objects, An object is data item in database to perform specific task. 
+			MySQL DB having following objects
+				TABLE, VIEW, INDEX, STORED PROCEDURE, FUNCTION, TRIGGER, ....
+				Note :-  all other objects are depends on Tables, because tables stores actual data. 
+
+	CREATE DATABASE  <DB_NAME>;
+
+	CREATE DATABASE  SEPTDB;
+
+USE :- This command is used to change from one database to another database. 
+		USE <DB_NAME>;
+
+Table Creation :- 
+		CREATE TABLE <TABLE_NAME>(
+		COL_1_NAME  <DATA TYPE> [CONSTRAINT], 
+		COL-2-NAME  <DATA TYPE> [CONSTRAINT],
+		.................
+		.................
+		COL_N_NAME <DATA TYPE> [CONSTRAINT]);
+
+
+Data Types:-   Classification of data based on column specified in table. 
+			Data classified into two type in general
+				Numeric Data - Numbers(integer - whole numbers &  float  -  decimal numbers)
+				Textual Data - Strings(Character -  Either Single digit/an alphabet/a symbol)
+							String - Collection of characters
+INT   -  integers (whole numbers)
+FLOAT 	-  decimal numbers
+CHAR	-  String with fixed length
+VARCHAR -  String with variable length
+DATE    -  Only Date Value (format: YYYY/MM/DD)
+TIME	-  Only Time Value (format:  HH:MM:SS)
+DATETIME - Both Date and Time
+IMAGE    - for Binary Data
+
+
+CREATE TABLE BIODATA(
+ROLLNO  INT, 
+STDNAME  VARCHAR(20), 
+BIRTHDATE  DATE, 
+LOCATION CHAR(10));
+	

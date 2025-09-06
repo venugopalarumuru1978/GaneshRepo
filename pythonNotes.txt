@@ -1,0 +1,171 @@
+Today's Agenda
+--------------
+Python Introduction
+	Data Types
+	Variables
+	Operators
+	Input / Output Statements
+---------------
+What is a Python?
+	It is a general purpose, Object Oriented(OOPS), Script based as well as Interpreted prog language which meant for developing different type of applications.
+
+OOPS - Object Oriented Programmig Structure
+Script Based -  Applications developed using python can be integrated with other prog lang applications very easly 		because scripting features. 
+
+Interpreter :-  Python code will execute line by line. 
+----------------------------
+Impartant Points 
+
+1. Python will not have any explicit data types to declare variables.
+		what is a variable?
+			It is a named memory location to store values temp. 
+			Variables are generated / created in Primary Memory(RAM) at the time prog execution.
+
+Data Types :-  Classifing of data is called data type. 
+
+		Numeric
+			Integer => All whole numbers
+			Decimal => All floating values
+		Text
+			Character => Any single alphabet / digit / symbol
+			String  =>  Collection of chars
+How to declare/create variable:-
+		variable_name = value
+
+		based on value assigned to variable, implicitly  data type will be allocated for the variable.
+
+		As per python, there are 5 types of datatypes are existed implicitly.
+
+		Integer - int
+		Decimal - float
+		String  - str
+		Boolean - bool(True/False)
+		Complex - complex(a+ib as per mathematics) => a+bj as per python
+
+		x = 10 = int
+		y = 12.45 - float
+		z = "hello" - string
+		ch = True - boolean
+		m = 4+7j - complex
+------------------
+2.  Operators :-  These are the symbols / words  which meant to perform specific operations b/w operands. 
+
+Arithmatic Operators :-  +, -, *, /, //, %, **
+				/ = division(result with decimals)
+				// = division(result without decimals)
+
+	10/3 =  3.3333
+	10//3 = 3
+	
+	10*3 = 30 
+	10**3 = 1000  (**  = n power m)
+
+Relational Operators :-  >, <, >=, <=, !=(not equals), ==(equals)
+Logical Operators :-   AND, OR, NOT
+Assignment Operators :-  =, +=, -=, /=, *=, **=, //=, %=
+Membership Operator :-  "IN" is called membership operator. 
+Identity Operator :-    "IS"  is called identity operator. 
+Concatenation Operators :-  ,(comma), +(plus)
+			to concatenate any two strings use + 
+			to concatenate any data type with string use ,
+Bitwise Operators :-  >>, <<, &, |
+----------------------------------
+Input / Output Statements
+
+print() :- this function is used to print any stmt or variable values line by line. 
+input() :-  this function is used to read value from keyboard and store into variable.  here value data type string. 
+		variable = input("Stmt")
+
+Conversion Functions :- 
+
+these functions are used to convert values from one data type to another type. 
+
+int() :-  from sting to integer
+float() :- string to decimal
+str() :-  any data type to string
+bool() :- from string to boolean
+complex() :-  from string to complex
+--------------------
+Note  1 :-  as per python, multiple variable can get one value assignment in single statement
+				x = y = 10
+  
+Note 2 :-  as per python, multiple variables can have multiple value assignments in single statement
+			x, y = 10, 20
+-------
+Control Statements:- 
+----------------
+These statements are used to control flow of program. 
+As per python
+
+1. Conditional Statements
+	if statement
+2. Looping Statements
+	while loop 
+	for loop
+
+if Statement :- used to chcek conditions, based condition true / false, some tasks will be done. 
+
+Simple If :- 
+
+if  <condition>:
+	set of statement
+
+if - else
+
+if  <condition>:
+	set of statements-1
+else:
+	set of statements-2
+
+else if :-  
+
+if  <cond-1>:
+	set of statements-1
+elif <cond-2>:
+	set of statements-2
+.....
+elif <cond-n>:
+	set of statements-n
+[else:
+	set of default stmts]
+
+
+nested if :-  if a condition within another if condition without else part. 
+	if <cond-1>:
+		if <cond-2>:
+			set of stmts
+--------------------
+Looping Statements :-
+	these statements are used to repeat the task for n number of times. 
+
+	while loop
+	for loop
+
+while loop :-
+
+variable initial value
+while <condition>:
+	set of statement
+	increment / decrement operations
+
+# print ur 5 times
+x = 1
+while x<=5:
+	print("Python")
+	x = x+1
+---------------
+x = 5
+while x>=1:
+	print("Python")
+	x = x-1
+
+for loop:- 
+
+for  variable in <set of values/collection obj>:
+	set of statements
+
+end :-  this word allows to stop line breaking in print() method and provides some spacing b/w values
+print(value/expression, end="spacing")
+
+range() :-  this function is used to generate values in specific sequencianl order. 
+range([start val], end val, [iteration]) :- here start val by default 0, iteration by default increment by 1

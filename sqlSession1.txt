@@ -1,0 +1,190 @@
+Today's Agenda
+---------------
+MySQL
+---------------
+Overall Course is Consist of 
+
+1.  Java(Core Java, Servlets, Jsp, JDBC, Hibernate)
+2.  Web Programming(React and Angular)
+3.  Spring Framework (Core/Web MVC/Spring Boot) -  RESTFul Services / Microservices
+4.  Testing
+5.  Cloud(AWS) and DevOps
+6.  Database(MySQL, MongoDb)
+
+End - End Project Development
+Gathering requirements of the project to deploying the project using DevOps and AWS. 
+Developing - Testing - Deploying
+---------------
+Why should we learn a programming language?
+	To develop softwares as per the client requirements. 
+
+Why should we learn databases?
+	To store data in a securied way. 
+---------------
+Data 		:- Collection of facts and figures / raw materials.
+Process		:- The work which we do using data.
+Information	:- The processed data. 
+
+			Data ==> Process ==> Information
+					or
+			Input ==> Process ==>  Output
+
+Table :- Collection of rows and columns is called a table.
+		for easy navigate with	data  and easy to understand. 
+
+	Every organisation uses data in the form of table format. 
+
+To maintain table formated data there are some softwares tools exist,  MS-Excel, MS-Access, ...
+
+Limitations of the file format:- 
+
+1.  Limited Data Storage.
+2.  No Security for the data.
+3.  Accessing Information is manual process.
+
+because of these reasons, organisations avoids working with file format to store their data. 
+so that we got an alternative solution, working with databases. 
+
+What is a Database? 
+	Collection of raw material of an entity organised in a structural format(Table). 
+				or
+	Collection of inter-related tables of an entity. 
+
+	Table		:-  Collection of rows and columns
+	Row/Record	:-  Complete info about an entity
+	Column/Attribute/Property :-  It specifies that one part of the Record. 
+
+Features :- 
+	To over come the limitations of File Process. 
+		1. Unlimited Data Storage.
+		2. Full Security, i.e. Only authorised people can access data.
+		3. It will provide Query Language, using that lang, we can access data very easly. 
+
+Example :- School Database
+	Students
+		Biodata		
+		Examination
+		Marks
+		Fees
+		Attendance
+		Transporatation
+	Employees
+		Emp_Personal_info
+		EmpJob Details
+		Emp Salary Details
+	Library
+		Books
+		Members
+		Suppliers
+		Issued_Books
+
+here each type of info can be presented as a separate Table(Biodata, Examination, Marks, Fees, ....).
+
+DBMS :- Database Management System
+		It is a the process of providing set of rules to create and manage database systems. 
+		These rules are called as Codd rules. because these are developed by M.F. Codd. 
+		These are almost 14 rules.
+
+		based DBMS, there are some new DBMS types exist
+			RDBMS	:-  Relational DBMS
+			ORDBMS	:-  Object Relational DBMS -- Object Oriented Programming Structure(OOPS)
+			MDBMS	:-  Modern DBMS  -  Deals with Remote Databases. 
+
+
+from these all dbms's, working enviornment going with RDBMS.
+
+
+DBMS -  DBase, FoxProw, ....
+
+Software Tools, MySQL(SQL, T-SQL), 
+		Oracle(SQL, SQL*Plus, PL/SQL), 
+		MS - SQL Server(SQL, T-SQL), 
+		Postgre SQL(SQL, SQL*Plus, PL/SQL), .....
+-----------------
+What is a MySQL?
+	It is one of the RDBMS related software tool.
+			There are two sections
+				1.  SQL 	:-   Structured Query Language
+				2.  T-SQL 	:-   Transact SQL(Programming)
+What is an SQL?
+		It is an Universal Language for Databases. It is a Non-Procedural Language so that it consist 
+		colllection of commands.
+
+		SQL was developed by ANSI Company, but they could not able to develop enviornment for the SQL.
+		they were working on SQL using Command Prompt.
+
+SQL Commands are classified into 5 types
+
+1.  Data Defintion Language(DDL) Commands :-   CREATE, ALTER, DROP
+2.  Data Maninpulation Language(DML) Commands :- INSERT, UPDATE, DELETE
+3.  Data  Retrival language(DRL) Command :- SELECT
+4.  Transaction Control Language(TCL) Commands :-  ROLLBACK, COMMIT
+5.  Data Control Language(DCL) Commands -  GRANT, REVOKE
+-------------------------------
+Operators :-  these are symbols / words used to perform some operations between operands.
+
+As per MySQL, 
+
+Arithematic operators :-  +, -, *, /, %
+Relational operators :-  >, <, >=,<=, !=(not equals), =
+Logical operators :-   AND, OR, NOT
+SQL operators :-   BETWEEN, IN, IS, LIKE
+----------------------------------------
+SQL Commands :- 
+Database :- It is a collection of Objects, An object is a data item in database, which tells that specific type of data. 
+		Objects :-   TABLE, VIEW, INDEX, STORED PROCEDURE, FUNCTIONS, TRIGGERS,...
+
+the following command is used to create a database
+
+CREATE  DATABASE  <DATABASE_NAME>;
+
+CREATE DATABASE WEEKENDDB;
+
+USE :-  this command is used to switch between one database to another database. 
+
+USE <DATABASE_NAME>;
+
+USE WEEKENDDB;
+
+How to create table:- 
+
+CREATE TABLE <TABLE_NAME>(
+COL-1 <DATA TYPE> [CONSTRAINT], 
+COL-2 <DATA TYPE> [CONSTRAINT], 
+------------
+COL-N <DATA TYPE> [CONSTRAINT]);
+
+Data Types:-  Classification of data based col specified while creating table. 
+
+INT  -  whole numbers
+FLOAT - decimal numbers
+CHAR  -  Text(String) with fixed length
+VARCHAR - Text(String) with VARIABLE length
+DATE	- for date values - (YYYY-MM-DD)
+TIME	- for time values
+DATETIME - for both date and time
+IMAGE    - for binary 
+LOB/CLOB/BLOB for binary
+--------------------------------
+Difference b/w CHAR and VARCHAR
+
+STDNAME  CHAR(20)	:- venugopal -  String Length is 20 chars
+STDNAME  VARCHAR(20)	:- venugopal -  String Length is 9 chars
+--------------------------------
+Constraints :-  these are the rules to implements on table columns while creating table. 
+
+NULL		:- it allows to have null values(empty values). it is default constraint
+NOT NULL	:- it will not allow null values
+UNIQUE		:- it will not allow duplicate values
+PRIMARY KEY	:- combination of Not Null and Unique
+CHECK		:- it checks range of values / specific values
+DEFAULT		:- it allows set a default value for a column.
+FORIGEN KEY	:- it allows create relationship b/w tables.
+------------------------------------------------------------
+CREATE TABLE STUDENT(
+ROLLNO INT PRIMARY KEY,
+STDNAME VARCHAR(20) NOT NULL, 
+GENDER  CHAR(1) CHECK(GENDER IN('M','F')), 
+AGE  INT CHECK(AGE>=20 AND AGE<=30), 
+LOCATION VARCHAR(20)  DEFAULT 'HYDERABAD');
+
