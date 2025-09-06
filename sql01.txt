@@ -132,10 +132,12 @@ TIME	-  Only Time Value (format:  HH:MM:SS)
 DATETIME - Both Date and Time
 IMAGE    - for Binary Data
 
+Constraints 
 
-CREATE TABLE BIODATA(
-ROLLNO  INT, 
-STDNAME  VARCHAR(20), 
-BIRTHDATE  DATE, 
-LOCATION CHAR(10));
-	
+Null
+Not Null
+Unique
+Primary Key
+Check
+Default
+Foriegn Key
